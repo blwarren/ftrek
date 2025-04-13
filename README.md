@@ -1,6 +1,6 @@
 # 🗺️ ftrek
 
-A fast and idiomatic Rust utility that visually displays the directory structure of a path.
+A fast Rust utility that visually displays the directory structure of a path.
 
 ## 🚀 Features
 
