@@ -1,4 +1,4 @@
-# 🗺️ ftrek
+# 📂 ftrek
 
 A fast Rust utility that visually displays the directory structure of a path.
 
