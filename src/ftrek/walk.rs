@@ -8,6 +8,7 @@ pub fn run(options: &TrekOptions) -> io::Result<()> {
     if options.gitignore {
         let walker = WalkBuilder::new(&options.root)
             .standard_filters(true)
+            .require_git(false)
             .build();
 
         visit_gitignore(walker, &options.root)?;
