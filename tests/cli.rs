@@ -61,3 +61,14 @@ fn defaults_to_current_directory_when_no_root_is_passed() {
         .stdout(predicate::str::contains("./"))
         .stdout(predicate::str::contains("local.txt"));
 }
+
+#[test]
+fn prints_help_documentation() {
+    let mut cmd = bin_cmd();
+    cmd.arg("--help");
+    cmd.assert()
+        .success()
+        .stdout(predicate::str::contains("Usage:"))
+        .stdout(predicate::str::contains("[DIRECTORY]"))
+        .stdout(predicate::str::contains("--gitignore"));
+}

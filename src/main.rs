@@ -1,11 +1,10 @@
 mod ftrek;
 
 use crate::ftrek::TrekOptions;
-use std::env;
+use clap::Parser;
 
 fn main() {
-    let args: Vec<String> = env::args().skip(1).collect();
-    let options = TrekOptions::from_args(&args);
+    let options = TrekOptions::parse();
 
     if let Err(e) = ftrek::run(&options) {
         eprintln!("Error: {e}");
